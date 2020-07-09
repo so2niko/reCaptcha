@@ -45,14 +45,58 @@
                     placeholder="Your opinion"></textarea>
             </div>
             <div class="g-recaptcha" data-sitekey="6Ldmka8ZAAAAAI1USAlJrmHll786jMFyGiw9tmNj"></div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <hr>
+          <hr>
+          <hr>
+          <hr>
+          <h1>reCaptcha v2. No Robot flag</h1>
+          <form 
+            id="demo-form"
+            class="" 
+            action="https://script.google.com/macros/s/AKfycbwjxgyrYvq2awc7f8iE2xmY5ggRqeEjdlAdvCSq3YV5Bdr8fF4/exec" method="GET">
+            <div class="row">
+                <div class="col pt-3">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="inpName" 
+                        aria-describedby="nameHelp"
+                        placeholder="Name"
+                        autofocus
+                        autocomplete="name"
+                        required
+                        name="name">
+                </div>
+                <div class="col pt-3">
+                    <input 
+                        type="email" 
+                        class="form-control" 
+                        id="inpEmail" 
+                        aria-describedby="emailHelp"
+                        placeholder="name@email.com"
+                        autocomplete="email"
+                        required
+                        name="email">
+                </div>
+            </div>
+            <div class="form-group pt-2">
+                <textarea 
+                    class="form-control" 
+                    id="inpOpinion" 
+                    rows="3"
+                    placeholder="Your opinion"
+                    name="opinion"></textarea>
+            </div>
             <button class="g-recaptcha" 
                 data-sitekey="6LfYk68ZAAAAAJXyuC_pcFo2mA8a5EvMktl_RbA7" 
                 data-callback='onSubmit' 
                 data-action='submit'>Submit</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
     </div>
     <script src="app/main.js" type="module"></script>
     <script src="app/form.js" type="module"></script>
+    <script src="app/re_captcha_v2.js"></script>
 </body>
 </html>
