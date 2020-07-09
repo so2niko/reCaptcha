@@ -5,8 +5,8 @@ function onSubmit(token) {
 function onClick(e) {
   e.preventDefault();
   grecaptcha.ready(function() {
-    grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
-        // Add your logic to submit to your backend server here.
+    grecaptcha.execute('6LfYk68ZAAAAAJXyuC_pcFo2mA8a5EvMktl_RbA7', {action: 'submit'}).then(function(token) {
+        console.log('smth happens', token);
     });
   });
 }
