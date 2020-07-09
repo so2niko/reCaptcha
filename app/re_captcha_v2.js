@@ -1,15 +1,5 @@
-function onSubmit(token) {
-    document.getElementById("demo-form").submit();
-}
-
-function onClick(e) {
-  e.preventDefault();
-  grecaptcha.ready(function() {
-    grecaptcha.execute('6LfYk68ZAAAAAJXyuC_pcFo2mA8a5EvMktl_RbA7', {action: 'submit'}).then(function(token) {
-        console.log('smth happens', token);
-    });
+var onloadCallback = function() {
+  grecaptcha.render('html_element', {
+    'sitekey' : '6Ldmka8ZAAAAAI1USAlJrmHll786jMFyGiw9tmNj'
   });
-}
-
-
-document.querySelector('#demo-form').addEventListener('submit', onClick);
+};
