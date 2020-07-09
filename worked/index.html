@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form reCaptcha</title>
+    <title>Context Menu</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
     <div class="ctx-menu-container"></div>
@@ -46,10 +46,14 @@
                     placeholder="Your opinion"
                     name="opinion"></textarea>
             </div>
-            <div id="html-element"></div>
+            <div id="html_element"></div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
-          <script src="app/re_captcha_v2.js"></script>
-          <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    </div>
+    <script src="app/re_captcha_v2.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+    <!-- <script src="app/form.js" type="module"></script> -->
 </body>
 </html>

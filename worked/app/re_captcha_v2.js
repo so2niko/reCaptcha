@@ -1,16 +1,22 @@
 var onloadCallback = function() {
   grecaptcha.render('html_element', {
-    'sitekey' : '6Ldmka8ZAAAAAI1USAlJrmHll786jMFyGiw9tmNj',
-    'data-callback' : onSubmit
+    'sitekey' : '6Lfelq8ZAAAAAAlKnKx63vdP5vVKZ3OXvv_oM18n',
+    'data-callback' : 'onSubmit'
   });
 };
 
 document.querySelector('.feedback-form')
   .addEventListener('submit', e => {
     e.preventDefault();//Отмена отправки формы по умолчанию
+    const response = grecaptcha.getResponse();
+    if(response){
+        fetch(`./captcha.php?response=${response}`)
+            .then(resp => resp.json())
+            .then(data => data.success ? onSubmit(): null);
+    }
 });
 
-function onSubmit(ev){
+function onSubmit(e){
   const msgThanks = document.querySelector('.msg-thanks');
 
   const { inpEmail, inpName, inpOpinion } = document.querySelector('.feedback-form').elements;
